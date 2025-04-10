@@ -1,6 +1,6 @@
 :root {
   --color_secondary: #ccc;
-  --color_primary: #333;
+  --color_primary: #2e5d61;
 }
 
 .blocks-container {
@@ -9,6 +9,7 @@
 
 .block__image {
   max-height: 19vh;
+  border-radius: 50%;
 }
 
 .block {
@@ -16,8 +17,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 6rem;
-  height: 20vh;
+  font-size: 15rem;
+  height: 50vh;
   padding: 0;
   border: 3px solid var(--color_secondary);
 }

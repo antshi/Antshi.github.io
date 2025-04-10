@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content='Something something'>
-    <title>Something</title>
+    <meta name="description" content='Antshi'>
+    <title>Antshi</title>
 
     <link rel="stylesheet" href="css/foundation.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -13,12 +13,48 @@
 
 <body>
     <section class="blocks-container">
-        <h1>I am a webpage</h1>
+        <div class="block column small-6">
+            <img src="https://avatars.githubusercontent.com/u/42948564?v=4" class="block__image" alt="A profile picture of Antshi" />
+        </div>
+        <div class="block block--link column small-6">
+            <a href="https://github.com/antshi" class="fa fa-github link"></a>
+        </div>
+        <div class="block block--link column small-6">
+            <a href="https://www.linkedin.com/in/antshi" class="fa fa-linkedin link"></a>
+        </div>
+        <div class="block block--link column small-6">
+            <a class="fa fa-envelope link" id="mail_link" style='display:none'></a>
+        </div>
+
     </section>
     <script>
     </script>
 
+    <script>
+        function setMailAddress(mailElement) {
+            let ma = 'mai';
+            ma += 'lto:an.shi';
+            let walterWhite = 'varova+chiocciola+gma';
+            walterWhite += 'il+punto+com';
+            let meh = ma + walterWhite;
+            meh = meh.replace('+chiocciola+', '@');
+            meh = meh.replace('+punto+', '.');
 
+            mailElement.setAttribute('href', meh);
+            mailElement.setAttribute('style', '');
+        }
+
+        document.addEventListener("DOMContentLoaded", event => {
+            setMailAddress(document.getElementById('mail_link'));
+
+            Array.from(document.getElementsByClassName('block--link')).forEach(element => {
+                element.addEventListener("click", event => {
+                    element.getElementsByClassName('link')[0].click()
+                })
+            });
+        });
+
+    </script>
 </body>
 
 </html>
